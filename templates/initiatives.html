@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block head %}
+   <title>Initiatives</title>
+{% endblock %}
+{% block main %}
+
+<div class="container-fluid" style="height:350px; background-color: #263238; opacity: 0.9;">
+    <div class="row welcome text-center top-text" style="padding-top: 3em;">
+        <div class="col-12">
+            <h1 class="display-5 p-5" style="color: #3EB489; font-weight: 500;">Current Initatives</h1>
+        </div>
+        <div>
+            <a href="/home"><button type="button" class="btn btn-outline-secondary btn-lg text-center;" style="color: #3EB489">Post!</button></a>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid padding text-center">
+    <div class="row padding reveal">
+        <div class="col-md-6" style="padding: 5em;">
+            <div class="card polaroid">
+                <img class="card-img-top blog-card" src="/static/responsibleLandUse.jpeg">
+                <div class="card-body">
+                    <h4 class="card-title">Responsible Land Use</h4>
+                    <p class="card-text blog-text" style="padding-top: 2em; padding-bottom: 1em;">this is bootiful land use, don't use trash. be recycle</p>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">Read More</a>
+                </div>
+                <div class="card-footer text-center">
+                    5/21/22
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="padding: 5em;">
+            <div class="card polaroid reveal">
+                <img class="card-img-top blog-card" src="/static/oceanAdvocacy.jpeg">
+                <div class="card-body">
+                    <h4 class="card-title">Ocean Advocacy</h4>
+                    <p class="card-text blog-text">ocean is bootiful. we love swim. join us in swim. i make swim team. we love ocean swim. samudra snaanam zinda baad!</p>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">Read More</a>
+                </div>
+                <div class="card-footer text-center">
+                    5/21/22
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+</div>
+
+<div class="container-fluid padding text-center" style="margin-top: -10em;">
+    <div class="row padding reveal">
+        <div class="col-md-6" style="padding: 5em;">
+            <div class="card polaroid">
+                <img class="card-img-top blog-card" src="/static/sustainablecommunities.jpeg">
+                <div class="card-body">
+                    <h4 class="card-title">Sustainable Communities</h4>
+                    <p class="card-text blog-text" style="padding-top: 2em; padding-bottom: 1em;">john is a grape fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">Read More</a>
+                </div>
+                <div class="card-footer text-center">
+                    5/21/22
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="padding: 5em;">
+            <div class="card polaroid reveal">
+                <img class="card-img-top blog-card" src="/static/carbonZero.jpeg">
+                <div class="card-body">
+                    <h4 class="card-title">Carbon Zero</h4>
+                    <p class="card-text blog-text">john is a another graper fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">Read More</a>
+                </div>
+                <div class="card-footer text-center">
+                    5/21/22
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+</div>
+
+
+{% endblock %}

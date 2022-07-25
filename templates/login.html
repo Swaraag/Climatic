@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>Login</title>
+    <script>
+
+    </script>
+{% endblock %}
+{% block main %}
+<div class="container-fluid" style="height: 100vh; opacity: 0.9;">
+    <div class="row welcome text-center top-text" style="padding: 40vh">
+        <div class="col-12" >
+            <form class="box" action="/login" method="post">
+                <h1 style="color: white; padding-bottom: 0.3em;">Log In</h1>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="password" placeholder="Password" type="password">
+                </div>
+                <div style="color: red;">{{ error }}</div>
+                <button class="btn btn-primary submit" name="submit" type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

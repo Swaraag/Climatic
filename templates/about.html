@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>About Us</title>
+{% endblock %}
+{% block main %}
+<!-- Meet the Team-->
+<div class="container-fluid" style="height:350px; background-color: #263238; opacity: 0.9;">
+    <div class="row welcome text-center top-text" style="padding-top: 3em;">
+        <div class="col-12">
+            <h1 class="display-5 p-5" style="color: #3EB489; font-weight: 500;">Meet the Team</h1>
+        </div>
+    </div>
+</div>
+
+<!-- Cards -->
+<div class="container-fluid padding text-center">
+    <div class="row padding" style="padding-left: 4.2em;">
+        <div class="col-md-3">
+            <div class="card polaroid" style="height: 40vw; width: 25vw;">
+                <img class="card-img-top" src="/static/johndoe.jpeg">
+                <div class="card-body">
+                    <h4 class="card-title">Johnny Doe</h4>
+                    <p class="card-text">john is a grape fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">See Profile</a>
+                </div>
+            </div>
+        </div>
+        
+     
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="card polaroid" style="height: 40vw; width: 25vw;">
+                <img class="card-img-top" src="/static/johndoe.jpeg">
+                <div class="card-body">
+                    <h4 class="card-title">Other Doe Boi</h4>
+                    <p class="card-text">john is a another graper fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">See Profile</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="card polaroid" style="height: 40vw; width: 25vw;">
+                <img class="card-img-top" src="/static/johndoe.jpeg">
+                <div class="card-body">
+                    <h4 class="card-title">Pro Joe Boi</h4>
+                    <p class="card-text">john is a another grapest fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">See Profile</a>
+                </div>
+            </div>
+        </div>  
+    </div> 
+</div>
+{% endblock %}
