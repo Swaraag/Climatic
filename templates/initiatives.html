@@ -3,7 +3,35 @@
 {% block head %}
    <title>Initiatives</title>
 {% endblock %}
+
+
+{% block js %}
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 0;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } 
+            else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal)
+
+</script>
+{% endblock %}
+
 {% block main %}
+
+
 
 <div class="container-fluid" style="height:350px; background-color: #263238; opacity: 0.9;">
     <div class="row welcome text-center top-text" style="padding-top: 3em;">

@@ -3,120 +3,271 @@
 {% block head %}
     <title>Climatic</title>
 {% endblock %}
+
+{% block js %}
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 0;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } 
+            else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal)
+
+</script>
+{% endblock %}
+
+{% block css %}
+<style>
+    .indexFirst {
+        height: 650px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        top: 200px;
+    }
+
+    .indexFirst h1 {
+        margin-bottom: 80px;
+        font-size: 50px;
+        color: #3EB489;
+    }
+    .indexSec {
+        background-color: white;
+        height: 400px;
+        width: 100%;
+    }
+    .indexSecTxt {
+        display: flex;
+    }
+    .indexSecTxt > p {
+        flex: 1;
+        position: relative;
+        font-size: 30px;
+        top: 100px;
+        margin: auto 100px;
+    }
+    .indexSecTxt p:nth-child(1) {
+        font-weight: 600;
+    }
+    .button {
+        color: #3EB489;
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: 350;
+        padding: 7px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .button:hover {
+        background-color: gray;
+        transition: background-color 0.25s;
+    }
+    .darkBackground {
+        background-color: #263238;
+        opacity: 0.9;
+    }
+    .indexThird {
+        height: 300px;
+        width: 100%;
+    }
+    .indexThird {
+        text-align: center;
+    }
+    .indexThird > * {
+        position: relative;
+        top: 50px;
+        margin-bottom: 50px;
+    }
+    .indexThird h1 {
+        color: #3EB489;
+    }
+    .indexThird p {
+        color: white;
+    }
+    .indexFourth{
+        background-color: white;
+        height: 400px;
+    }
+    .indexFourth > * {
+        position: relative;
+        top: 100px;
+        text-align: center;
+    }
+    .indexFourth p:nth-child(1) {
+        font-size: 25px;
+        margin-bottom: 80px;
+    }
+    .indexFourth p:nth-child(2) {
+        font-size: 20px;
+    }
+    .indexFifth {
+        height: 250px;
+    }
+    .indexFifth h1{
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 80px;
+        font-size: 50px;
+    }
+    .indexSixth {
+        display: flex;
+        padding: 0 300px;
+    }
+    .indexSixth > * {
+        flex: 1;
+    }
+    .teamMember {
+        height: 680px;
+        background-color: white;
+        box-shadow: 3px 3px 30px 0 rgb(0,0,0,.8);
+        border-radius: 5px;
+        margin-bottom: 80px;
+    }
+    .teamMember img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    .teamMember h3 {
+        position: relative;
+        top: 13px;
+        left: 15px;
+        font-weight: 450;
+    }
+    .teamMember p {
+        position: relative;
+        top: 15px;
+        left: 15px;
+    }
+    .teamMember a button{
+        font-size: 17px;
+        position: relative;
+        top: 10px;
+        left: 15px;
+    }
+    .teamMember:nth-of-type(1),
+    .teamMember:nth-of-type(2) {
+        margin-right: 50px;
+    }
+    .indexSeventh {
+        background-color: white;
+        opacity: 0.9;
+        text-align: center;
+        height: 300px;
+        width: 100%;
+        
+    }
+    .indexSeventh > * {
+        position: relative;
+        top: 50px;
+    }
+    .indexSeventh h2 {
+        color: #263238;
+        margin-bottom: 50px;
+        font-size: 40px;
+    }
+    .indexSeventh .icons > a {
+        margin: auto 20px;
+        font-size: 60px;
+        color: #d5d5d5;
+    }
+    .fa-facebook {
+        color: #3b5998;
+    }
+    .fa-twitter {
+        color: #00aced;
+    }
+    .fa-google-plus-g {
+        color: #dd4b39
+    }
+    .fa-instagram {
+        color: #ff7b00;
+    }
+    .fa-youtube {
+        color: #bb0000;
+    }
+    .indexSeventh .icons > a {
+        color: #d5d5d5;
+    }
+</style>
+{% endblock %}
+
 {% block main %}
 
-<div class="container-fluid padding " style="height:650px;">
-    <div class="row welcome text-center top-text" style="padding: 10em;">
-        <div class="col-12">
-            <h1 class="display-5 p-5" style="color: #3EB489; font-weight: 500;">Protecting natural habitats from extinction.</h1>
-        </div>
-        <div>
-            <a href="/about"><button type="button" class="btn btn-outline-secondary btn-lg text-center;" style="color: #3EB489">About Us</button></a>
-        </div>
+<div class="indexFirst">
+    <h1>protecting natural habitats from extinction.<h1>
+    <a href="/about.html"><button type="button" class="button">About Us</button></a>
+</div>
+
+<div class="streamlit">
+    <iframe src="/sttest" title="Stink"></iframe>
+</div>
+
+<div class="indexSec">
+    <div class="indexSecTxt">
+        <p> Climate change threatens every part of the planet. It’s a global problem that requires global cooperation.</p>
+        <p> Our mission is to create international consensus around the climate emergency, as well a shared plan for saving the planet’s most exceptional wild places.</p>
     </div>
 </div>
 
+<div class="indexThird darkBackground reveal">
+    <h1>Changing the world is possible. We’ve done it before</h1>
+    <p>Our leadership team bring years of experience to bear on the greatest challenge of our time. We're results driven, with a proven record of previous successes.</p>
+    <a href="/about"><button type="button" class="button">Learn More</button></a>
+</div>
 
-<!-- JUMBOTRON -->
-<div class="container-fluid jumbotron">
-    <div class="row reveal">
-        <div class="col-6" style="padding: 4em">
-            <p class="lead" style="font-size: 200%; font-weight: 600;"> Climate change threatens every part of the planet. It’s a global problem that requires global cooperation.</p>
-        </div>
-        <div class="col-6" style="padding: 4em">
-            <p style="font-size: 175%"> Our mission is to create international consensus around the climate emergency, as well a shared plan for saving the planet’s most exceptional wild places.</p>
-        </div>
+<div class="indexFourth">
+    <p> “Clarkson has helped accomplish over 200 of its partners’ major conservation goals. They inspire everyone to care for the planet.” </p>
+    <p>- Quote Source</p>
+</div>
 
+<div class="indexFifth darkBackground">
+    <h1>Meet the Team</h1>
+</div>
+
+<div class="indexSixth darkBackground">
+    <div class="teamMember"> 
+        <img src="/static/images/johndoe.jpeg">
+        <h3>John Doe</h3>
+        <p>john is a grape fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+        <a href="https://www.linkedin.com/"><button type="button" class="button">Learn More</button></a>
     </div>
-</div>
-
-<div class="container-fluid padding" style="background-color: #263238; opacity: 0.9;">
-    <div class="column reveal col-5">
-        <div>
-            <h1 class="p-5" style="color: #3EB489; font-size: 200%;">Changing the world is possible. We’ve done it before.</h1>
-        </div>
-        <div class="container-fluid">
-            <p style="color: white; padding-left: 2.5em;">Our leadership team bring years of experience to bear on the greatest challenge of our time. We’re results driven, with a proven record of previous successes.</p>
-        </div>
-        <div style="padding-left: 3.2em; padding-top: 2em;">
-            <a href="/about"><button type="button" class="btn btn-outline-secondary btn-lg" style="color: #3EB489;">Learn More</button></a>
-        </div>
+    <div class="teamMember"> 
+        <img src="/static/images/johndoe.jpeg">
+        <h3>John Doe</h3>
+        <p>john is a grape fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+        <a href="https://www.linkedin.com/"><button type="button" class="button">Learn More</button></a>
     </div>
-</div>
-
-<div class="container-fluid jumbotron">
-    <div class="row">
-        <div>
-            <p class="lead text-center" style="font-size: 150%; color: #263238; padding: 2em 8em 2em"> “Clarkson has helped accomplish over 200 of its partners’ major conservation goals. They inspire everyone to care for the planet.” </p>
-        </div>
-        <div>
-            <p class="lead text-center" style="font-size: 125%; color: #263238">- Quote Source</p>
-        </div>
+    <div class="teamMember"> 
+        <img src="/static/images/johndoe.jpeg">
+        <h3>John Doe</h3>
+        <p>john is a grape fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
+        <a href="https://www.linkedin.com/"><button type="button" class="button">Learn More</button></a>
     </div>
-</div>
 
-<!-- Meet the Team-->
-<div class="container-fluid padding" style="background-color:#263238; opacity: 0.9;">
-    <div class="row welcome text-center">
-        <div class="col-12">
-            <h1 class="display-4" style="color: white;">Meet the Team</h1>
-        </div>
-    </div>
 </div>
-<!-- Cards -->
-<div class="container-fluid padding text-center" style="background-color:#263238; opacity: 0.9;">
-    <div class="row padding" style="padding-left: 4.2em;">
-        <div class="col-md-3">
-            <div class="card polaroid" style="height: 40vw; width: 25vw;">
-                <img class="card-img-top" src="/static/johndoe.jpeg">
-                <div class="card-body">
-                    <h4 class="card-title">Johnny Doe</h4>
-                    <p class="card-text">john is a grape fello who does a lot of grape fello thingies. johnny doe is pro boi</p>
-                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">See Profile</a>
-                </div>
-            </div>
-        </div>
-        
-     
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-            <div class="card polaroid" style="height: 40vw; width: 25vw;">
-                <img class="card-img-top" src="/static/johndoe.jpeg">
-                <div class="card-body">
-                    <h4 class="card-title">Other Doe Boi</h4>
-                    <p class="card-text"> this john is built very different than his other john friends. he won vocab bee, but doesn't know what vocab is</p>
-                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">See Profile</a>
-                </div>
-            </div>
-        </div>
-        
-
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-            <div class="card polaroid" style="height: 40vw; width: 25vw;">
-                <img class="card-img-top" src="/static/johndoe.jpeg">
-                <div class="card-body">
-                    <h4 class="card-title">Pro Joe Boi</h4>
-                    <p class="card-text">john is a super grapo fallow you is grape as spelling. he won spelling be champ with final word as john</p>
-                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-secondary" style="color: #3EB489">See Profile</a>
-                </div>
-            </div>
-        </div>  
-    </div> 
-</div>
-<!-- Connect-->
-<div class="container-fluid padding" style="background-color: white; opacity: 0.9; ">
-    <div class="row text-center padding">
-        <div class="col-12">
-            <h2 style="color:#263238">Connect</h2>
-        </div>
-        <div class="col-12 social padding">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
+<!-- Connect -->
+<div class="indexSeventh">
+    <h2>Connect</h2>
+    <div class="icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
 </div>
 

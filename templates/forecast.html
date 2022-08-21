@@ -5,6 +5,7 @@
 {% endblock %}
 {% block main %}
 
+
 <div class="container-fluid" style="height:250px; background-color: #263238; opacity: 0.9;">
     <div class="row welcome text-center top-text">
         <div class="col-12">
@@ -14,51 +15,42 @@
 </div>
 
 <div class="container-fluid" style="background-color: #263238">
-    <div class="container-fluid">
-        <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="display-4" style="color: #3EB489; font-weight: 400;">Questions</h1>
-            </div>
-        </div>
-        <div class="container-fluid input-group" style="margin-left: 40%; margin-top: 2%;">
+
+        <div class="container-fluid input-group" style="margin-left: 40%;">
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 form-outline" type="search"  size:="500" placeholder="Search questions..." aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0 form-label" style="color: white;" type="submit">Search</button>
               </form>
           </div>
-    </div>
     
     
-    <div class="container-fluid" style="margin-top: 5em; width: 70%; ">
-            <table>
-                <div class="container-fluid card question">
-                    <p>Which year will lakeside do blah blah bhal?</p>
-                    <div>
-                        <button style="border: none;">
-                            <i class="far fa-comment icon"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="container-fluid card question">
-                    <p>When will the solar system go boom?</p>
-                </div>
-                <div class="container-fluid card question">
-                    <p>When will brother stop being amazing :)</p>
-                </div>
-                <div class="container-fluid card question">
-                    <p>What year will the dynasty of sistla be bad?</p>
-                </div>
-                <div class="container-fluid card question">
-                    <p>Why are you so badddddd?</p>
-                </div>
+    
+    <div class="container-fluid">
+            <table id="q-table" style="margin-top: 5em; width: 99%">
+              
             </table>
     </div>
-    
+   
 </div>
+<script src="../javascript/forecast.js"></script>
 
 
-
-
+<script>
+    const questions = ["Which year will Lakeside do Blah?", "When will the solar system go boom?", "When will brother stop being amazing :)", "What year will the dynasty of sistla be bad?", "Why are you so badddddd?"];
+    for (let q of questions) {
+        let newQDiv = document.createElement('div');
+        newQDiv.classList.add("container-fluid");
+        newQDiv.classList.add("card");
+        newQDiv.classList.add("question");
+        let newQ = document.createElement('p');
+        newQ.innerHTML = q;
+        console.log(q);
+        document.getElementById('q-table').appendChild(newQDiv);
+        newQDiv.appendChild(newQ);
+    }
+</script>
 
 
 {% endblock %}
+
+

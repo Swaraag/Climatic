@@ -3,7 +3,8 @@ import sqlite3
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
-
+import pandas as pd
+import numpy as np
 
 
 app = Flask(__name__)
@@ -47,7 +48,6 @@ def login():
         # Query database for username
         climatic.execute("SELECT * FROM users WHERE username = ?", (request.form.get("username"),))
         rows = climatic.fetchall()
-        print(rows)
         # Ensure username exists and password is correct
         if len(rows) != 1:
             error = "Please enter existing username"
@@ -59,7 +59,7 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0][0]
-
+        print(session["user_id"])
         # Redirect user to home page
         return redirect("/")
 
@@ -96,9 +96,7 @@ def register():
         hashed_password = generate_password_hash(request.form.get("password"))
 
         perms = "poster"
-        print(request.form.get("username"))
-        print(hashed_password)
-        print(perms)
+        
         
         climatic.execute("INSERT INTO users (username, hash, perms) VALUES (?, ?, ?)", (request.form.get("username"), hashed_password, perms))
         con.commit()
