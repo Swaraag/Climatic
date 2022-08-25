@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-st.write(""" # Polling""")
+st.write(""" # Polling Time!""")
 questionText = st.write("Below are some questions we'd love for you to answer!")
 
 
