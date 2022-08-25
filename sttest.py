@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
-st.write(""" # My first app""")
+st.write(""" # Polling""")
+st.write("Below are some questions")
 
-number = st.slider("Pick a number", 0, 100)
+ccYears = st.slider("How many years will it take for Climate Change to be solved?", 0, 100)
