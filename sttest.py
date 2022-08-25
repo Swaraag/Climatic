@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 st.write(""" # Polling Time!""")
+
 questionText = st.write("Below are some questions we'd love for you to answer!")
 
 
@@ -21,9 +22,5 @@ if csv_data is not None:
     
 
 if st.button("Submit"):
-    questionText.empty()
-    ccYears.empty()
-    ccDeath.empty()
-    ccDate.empty()
-    csv_data = st.empty()
+
     completed = st.write("Thanks for filling out the questions!")
